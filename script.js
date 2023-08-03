@@ -30,7 +30,8 @@ function displayNumbersOneByOne() {
 
   function displayNextNumber() {
     if (currentIndex < numbers.length) {
-        trxHarian.textContent = numbers[currentIndex];
+        var trxToday = numbers[currentIndex];
+        trxHarian.textContent = Number(trxToday).toLocaleString();
       currentIndex++;
     } else {
       clearInterval(interval);
